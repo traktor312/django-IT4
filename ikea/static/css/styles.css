@@ -16,3 +16,12 @@ article{
 h1{
     font-weight: 1000 !important;
 }
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+footer {
+    margin-top: auto;
+}
