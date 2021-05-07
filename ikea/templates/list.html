@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}List{% endblock %}
+
+{% block content %}
+    <div class="row">
+        {% for nabytek in nabytek_list%}
+        <article>
+            <div>
+                {% if nabytek.foto %}
+                <p><a href="{% url 'detail' nabytek.pk %}"><img src="{{ nabytek.foto.url}}"></a></p>
+                {% endif %}
+            </div>
+            <div>
+                <h3><a href="{% url 'detail' nabytek.pk %}">{{ nabytek.nazev }}</a></h3>
+                <p>{{ nabytek.cena }} Kč</p>
+                <p>{{ nabytek.druh.oblast }}</p>
+            </div>
+        </article>
+        {% endfor %}
+    </div>
+    <p><a href="{% url 'my-create' %}" class="btn btn-success">Nový produkt</a></p>
+{% endblock %}

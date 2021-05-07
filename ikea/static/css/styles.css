@@ -1,0 +1,18 @@
+img{
+    width: 100%;
+    height: auto;
+}
+div{
+    padding: 20px;
+}
+h3{
+    margin-top: 10px;
+}
+article{
+    width: 350px;
+    max-width: 100%;
+    height: auto;
+}
+h1{
+    font-weight: 1000 !important;
+}

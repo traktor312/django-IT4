@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block title %}Úvodní stránka{% endblock %}
+
+{% block content %}
+    <h2>{{ nadpis }}</h2>
+    <p>{{ obsah }}</p>
+    <p class="text-center display-4"><a href="{% url 'list' %}">NÁBYTEK</a></p>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}Podrobnosti{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-sm-12 col-md-8">
+            {% if nabytek.foto %}
+            <p><img src="{{ nabytek.foto.url}}"></p>
+            {% endif %}
+        </div>
+        <div class="col-sm-12 col-md-4">
+            <h3>{{ nabytek.nazev }}</h3>
+            <p>{{ nabytek.popis }}</p>
+            <p>{{ nabytek.cena }} Kč</p>
+            <p>{{ nabytek.druh.oblast }}</p>
+            <p>
+                <a href="{% url 'my-update' nabytek.pk %}" class="btn btn-primary">Upravit</a>
+                <a href="{% url 'my-delete' nabytek.pk %}" class="btn btn-danger">Smazat</a>
+            </p>
+        </div>
+    </div>
+{% endblock %}
